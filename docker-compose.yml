@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+      POSTGRES_PASSWORD: "qwerty"
+      # PGDATABASE: "fourth"
+      # PGUSER: "postgres"
+    ports:
+      - 5432:5432
+    volumes:
+      - $PWD/database:/var/lib/postgresql/data
